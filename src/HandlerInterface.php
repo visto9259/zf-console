@@ -20,4 +20,3 @@ interface HandlerInterface
 
     public function __invoke(Route $route, AdapterInterface $console);
 }
-
