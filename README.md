@@ -359,6 +359,25 @@ arguments:
 - The `ZF\Console\Route` instance that matched
 - The `Zend\Console` adapter currently in use
 
+You may create the callable by implementing `ZF\Console\HandlerInterface`, which defines the following method:
+
+    namespace ZF\Console;
+
+    use Zend\Console\Adapter\AdapterInterface;
+
+    interface HandlerInterface
+    {
+
+       /**
+        * Invokable for Zf/Console Route handler
+        *
+        * @param Route $route
+        * @param AdapterInterface $console
+        */
+
+       public function __invoke(Route $route, AdapterInterface $console);
+    }
+
 In most cases, you will use the `Route` instance to gather arguments passed to the application, and
 the `Console` instance to provide any feedback or to prompt for any additional information.
 

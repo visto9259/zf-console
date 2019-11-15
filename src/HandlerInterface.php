@@ -10,14 +10,14 @@ use Zend\Console\Adapter\AdapterInterface;
 
 interface HandlerInterface
 {
-    
+
     /**
      * Invokable for Zf/Console Route handler
-     * 
+     *
      * @param Route $route
      * @param AdapterInterface $console
      */
-    
-    public function __invoke( Route $route, AdapterInterface $console);
+
+    public function __invoke(Route $route, AdapterInterface $console);
 }
 
